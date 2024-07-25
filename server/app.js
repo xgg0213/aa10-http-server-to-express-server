@@ -51,6 +51,10 @@ app.get('/users/:userId', (req, res) => {
     res.status(200).send(`User details for userId: ${userId}`);
 })
 
+app.get('*', (req, res) => {
+    res.status(404).send('Not Found');
+})
+
 
 // HTTP Server: Set port and listen for requests
 // const port = 5000;
